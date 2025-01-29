@@ -1,2 +1,8 @@
 # MiniProject_htmlCss
-create by Html and Css 
+
+A simple project built using **HTML & CSS**.
+
+## Features:
+- Responsive design
+- Embedded video and images
+- Interactive buttons
