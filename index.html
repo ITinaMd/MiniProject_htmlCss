@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-        <div class="menu">
-            <div class="menu-right">
-                <a href="">Home</a>
-                <a href="">What We Do</a>
-                <a href="">Service</a>
-                <a href="">Project</a>
-                 <a href="">Blog</a>
-                <a href="">Contact</a>
-            </div>
-
-            <div class="logo">
-                <h1>A+</h1>
-                <p>Studio</p>
-            </div>
+    <div class="menu">
+        <div class="logo">
+            <h1>A+</h1>
+            <p>Studio</p>
         </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="menu-right">
+            <a href="#">Home</a>
+            <a href="#">What We Do</a>
+            <a href="#">Service</a>
+            <a href="#">Project</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
 
 
         <div class="header-box">
@@ -214,8 +220,18 @@
 
         <div class="copyright">
             <p>&copy; All Rights Reserved. Your Website Design</p>
-            <a href="#">Website Builder by Tina</a>
+            <a href="#">Website Builder by Microweber</a>
         </div>
+
+
+
+
+        <script>
+            function toggleMenu() {
+                let menu = document.querySelector(".menu-right");
+                menu.classList.toggle("active");
+            }
+        </script>
 
 </body>
 </html>
