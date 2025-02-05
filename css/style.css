@@ -5,8 +5,17 @@
 }
 
 body {
+  width: 100vw;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
+
+:root {
+  --primary-color: #2338f7;
+  --secondary-color: #f0f4f9;
+  --font-family: sans-serif;
+}
+
 
 .menu {
   width: 100%;
@@ -104,32 +113,33 @@ body {
 .header-box {
   width: 100%;
   height: 590px;
-  position: relative;
+  display: flex;
 }
 
 .header-box .box-image {
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
 }
 
 .header-box .box-image img {
   width: 705px;
   height: 500px;
   border-bottom-left-radius: 200px;
-  z-index: 1;
+  display: flex;
 }
 
 .header-box .box-image .eclipse {
-  position: absolute;
-  right: -54px;
-  margin-right: 690px;
-  top: 0;
   background-color: #dae9ff;
   border-radius: 100px;
   height: 129px;
   width: 129px;
   border-radius: 50% 50% 0 0;
-  transform: rotate(276deg);
+  transform: rotate(206deg);
+  justify-content: flex-end;
+  align-items: end;
+  position: absolute;
+  left: 40px;
+  bottom: 60px;
+  z-index: -1;
 }
 
 .rectangle {
@@ -140,26 +150,24 @@ body {
   height: 178px;
   background-color: #fce3f9;
   border-bottom-right-radius: 100px;
+  z-index: -1;
 }
 
 .header-box .box-text {
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: flex-start;
-  margin-top: -385px;
+  justify-content: center;
+  margin-left: 50px;
   flex-direction: column;
 }
 
 .header-box .box-text h1 {
-  margin-left: 100px;
   font-size: 60px;
   font-family: sans-serif;
 }
 
 .header-box .box-text p {
-  margin-left: 100px;
-  margin-top: 20px;
   font-family: sans-serif;
   line-height: 25px;
 }
@@ -167,7 +175,6 @@ body {
 .header-box .box-text button {
   width: 165px;
   height: 55px;
-  margin-left: 100px;
   margin-top: 30px;
   border-radius: 40px;
   font-size: 20px;
@@ -187,11 +194,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .header-box .box-image {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     position: relative;
   }
@@ -204,14 +213,12 @@ body {
   }
 
   .header-box .box-text {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 20px;
-    position: relative;
-    z-index: 2;
+    padding: 10px;
   }
 
   .header-box .box-text h1 {
@@ -225,8 +232,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .header-box .box-text {
-    width: 100%;
-    padding: 0 20px;
+    margin: auto;
+    padding: 10px;
   }
 
   .header-box .box-text h1 {
@@ -241,14 +248,11 @@ body {
     width: 140px;
     height: 45px;
     font-size: 18px;
+    background-color: slateblue;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .header-box {
-    padding: 20px;
-  }
-
   .header-box .box-image img {
     width: 100%;
     height: auto;
@@ -256,8 +260,8 @@ body {
   }
 
   .header-box .box-text {
-    width: 100%;
-    padding: 0 15px;
+    margin: auto;
+    padding: 10px;
   }
 
   .header-box .box-text h1 {
@@ -267,6 +271,7 @@ body {
   .header-box .box-text p {
     font-size: 14px;
     line-height: 22px;
+    margin-top: 20px;
   }
 
   .header-box .box-text button {
@@ -351,6 +356,7 @@ body {
   }
 }
 
+/* box business */
 .box-business {
   width: 100%;
   height: 600px;
@@ -493,12 +499,18 @@ body {
     width: 180px;
     height: 350px;
   }
+
+  .image-business .box1 {
+    margin-top: 30px;
+  }
+
   .shape {
     margin-left: 50px;
     margin-top: 250px;
   }
   .shape-business {
     width: 50%;
+    padding-top: 60px;
   }
   .shape-business h3,
   .shape-business p {
@@ -534,15 +546,18 @@ body {
     padding: 15px;
     margin: 5px 0;
   }
+
   .shape {
     width: 120px;
     height: 120px;
     margin-left: 20px;
     margin-top: 100px;
+    display: none;
   }
   .shape-business {
     width: 80%;
     text-align: center;
+    margin: auto;
   }
   .shape-business h3 {
     font-size: 30px;
@@ -641,7 +656,7 @@ body {
   .box-clip .txt-near-clip {
     width: 90%;
     max-width: 400px;
-    padding: 15px;
+    padding: 5px;
   }
 
   .txt-near-clip h1 {
@@ -660,7 +675,6 @@ body {
   height: 350px;
   position: relative;
 }
-
 .btn-subscribe {
   width: 80%;
   height: 100%;
@@ -694,10 +708,6 @@ body {
   top: 35%;
   right: 249px;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
 }
 
 .btn-subscribe #input-email {
@@ -765,56 +775,285 @@ body {
   margin-left: 113px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-  .btn-subscribe {
-    width: 90%;
-  }
-  .btn-subscribe .btn-search {
-    width: 90%;
-    right: 5%;
-  }
-  .txt-subscribe {
-    left: 50px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .btn-subscribe {
-    width: 95%;
+/* Media Query برای موبایل (صفحه‌های کوچک) */
+@media only screen and (max-width: 767px) {
+  .box-dis {
     height: auto;
     padding: 20px;
-  }
-  .btn-subscribe .btn-search {
-    width: 100%;
-    right: 0;
-    top: auto;
-    position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .btn-subscribe {
+    width: 100%;
+    height: auto;
+    position: static;
+    transform: none;
+    padding: 20px;
+    background-color: #f0f4f9;
+    border-radius: 50px;
+    text-align: center;
+  }
+
+  .btn-subscribe .btn-Semicircular {
+    display: none; /* مخفی کردن .btn-Semicircular در موبایل */
+  }
+
+  .btn-subscribe .btn-search {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin-top: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     padding: 10px;
   }
+
   .btn-subscribe #input-email {
     width: 100%;
-    height: 50px;
-    border-radius: 20px;
-    margin-bottom: 10px;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 16px;
   }
+
   .btn-subscribe .input-submit {
     width: 100%;
     height: 50px;
-    font-size: 18px;
-  }
-  .txt-subscribe {
-    width: 100%;
-    text-align: center;
-    left: 0;
     position: static;
+    margin-top: 10px;
+    background-color: #2338f7;
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .btn-subscribe .txt-subscribe {
+    width: 100%;
+    height: auto;
+    position: static;
+    text-align: center;
     margin-top: 20px;
   }
+
+  .txt-subscribe h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .txt-subscribe p {
+    font-size: 14px;
+    color: #3f3f3f;
+  }
+
   .box-rectangle {
+    display: none; /* مخفی کردن عنصر در موبایل */
+  }
+
+  .hr {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Media Query برای تبلت (صفحه‌های متوسط) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .box-dis {
+    height: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-subscribe {
+    width: 90%;
+    height: auto;
+    position: static;
+    transform: none;
+    padding: 30px;
+    background-color: #f0f4f9;
+    border-radius: 50px;
+    text-align: center;
+  }
+
+  .btn-subscribe .btn-Semicircular {
+    width: 50%;
+    height: 200px;
+    position: static;
+    border-radius: 50px;
+    background-color: #2338f7;
+    margin: 0 auto 20px;
     display: none;
+  }
+
+  .btn-subscribe .btn-search {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin-top: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .btn-subscribe #input-email {
+    width: 60%;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .btn-subscribe .input-submit {
+    width: 30%;
+    height: 50px;
+    position: static;
+    background-color: #2338f7;
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .btn-subscribe .txt-subscribe {
+    width: 100%;
+    height: auto;
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .txt-subscribe h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .txt-subscribe p {
+    font-size: 16px;
+    color: #3f3f3f;
+  }
+
+  .box-rectangle {
+    display: none; /* مخفی کردن .box-rectangle در تبلت */
+  }
+
+  .hr {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 30px;
+  }
+}
+
+/* Media Query برای دسکتاپ (صفحه‌های بزرگ) */
+@media only screen and (min-width: 1025px) {
+  .box-dis {
+    height: 350px;
+  }
+
+  .btn-subscribe {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f4f9;
+    border-radius: 50px;
+    z-index: 1;
+  }
+
+  .btn-subscribe .btn-Semicircular {
+    width: 42%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #2338f7;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .btn-subscribe .btn-search {
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
+    position: absolute;
+    top: 35%;
+    right: 249px;
+    background-color: #fff;
+  }
+
+  .btn-subscribe #input-email {
+    width: 240px;
+    height: 100%;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 20px;
+    font-size: 17px;
+  }
+
+  .btn-subscribe .input-submit {
+    margin-right: 16px;
+    width: 136px;
+    height: 80px;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    background-color: #2338f7;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .btn-subscribe .txt-subscribe {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 90px;
+    left: 85px;
+  }
+
+  .txt-subscribe h1 {
+    font-size: 50px;
+    font-family: sans-serif;
+  }
+
+  .txt-subscribe p {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #3f3f3f;
+  }
+
+  .box-rectangle {
+    position: absolute;
+    bottom: -29px;
+    left: 128px;
+    z-index: 0;
+    background-color: #fff5db;
+    width: 176px;
+    height: 178px;
+    border-bottom-left-radius: 100px;
+  }
+
+  .hr {
+    width: 88%;
+    height: 1px;
+    background-color: #000000;
+    margin-top: 149px;
+    margin-left: 113px;
   }
 }
 
@@ -910,7 +1149,6 @@ body {
   font-size: 15px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 992px) {
   .footer {
     height: auto;
